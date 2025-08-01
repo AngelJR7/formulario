@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Acceso al formulario</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding-top: 50px; }
+    input, button { font-size: 1.2em; padding: 10px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Ingresa tu código de acceso</h2>
+  <input type="text" id="codigo" placeholder="Ej: M483" maxlength="4">
+  <br>
+  <button onclick="redirigir()">Entrar</button>
+
+  <script>
+    const enlaces = {
+      'M483': 'https://docs.google.com/forms/d/e/1FAIpQLSce-6g2KwWkn6VLJqD8zM8iCCNkIaGT7qt3fHJq6LjAWYBy-A/viewform?entry.696649977=Ángel+Julián',
+      'T027': 'https://docs.google.com/forms/d/e/1FAIpQLSce-6g2KwWkn6VLJqD8zM8iCCNkIaGT7qt3fHJq6LjAWYBy-A/viewform?entry.696649977=Laura+Sánchez',
+      'B914': 'https://docs.google.com/forms/d/e/1FAIpQLSce-6g2KwWkn6VLJqD8zM8iCCNkIaGT7qt3fHJq6LjAWYBy-A/viewform?entry.696649977=Diego+Martínez',
+      'R302': 'https://docs.google.com/forms/d/e/1FAIpQLSce-6g2KwWkn6VLJqD8zM8iCCNkIaGT7qt3fHJq6LjAWYBy-A/viewform?entry.696649977=Camila+Torres',
+      'S186': 'https://docs.google.com/forms/d/e/1FAIpQLSce-6g2KwWkn6VLJqD8zM8iCCNkIaGT7qt3fHJq6LjAWYBy-A/viewform?entry.696649977=Valentina+Ríos',
+      'F750': 'https://docs.google.com/forms/d/e/1FAIpQLSce-6g2KwWkn6VLJqD8zM8iCCNkIaGT7qt3fHJq6LjAWYBy-A/viewform?entry.696649977=Mateo+Fernández',
+      'G239': 'https://docs.google.com/forms/d/e/1FAIpQLSce-6g2KwWkn6VLJqD8zM8iCCNkIaGT7qt3fHJq6LjAWYBy-A/viewform?entry.696649977=Sofía+Ramírez',
+      'L601': 'https://docs.google.com/forms/d/e/1FAIpQLSce-6g2KwWkn6VLJqD8zM8iCCNkIaGT7qt3fHJq6LjAWYBy-A/viewform?entry.696649977=Andrés+López',
+      'K094': 'https://docs.google.com/forms/d/e/1FAIpQLSce-6g2KwWkn6VLJqD8zM8iCCNkIaGT7qt3fHJq6LjAWYBy-A/viewform?entry.696649977=Mariana+Castillo',
+      'Z888': 'https://docs.google.com/forms/d/e/1FAIpQLSce-6g2KwWkn6VLJqD8zM8iCCNkIaGT7qt3fHJq6LjAWYBy-A/viewform?entry.696649977=Joaquín+Herrera',
+    };
+
+    function redirigir() {
+      const codigo = document.getElementById("codigo").value.toUpperCase().trim();
+      if (enlaces[codigo]) {
+        window.location.href = enlaces[codigo];
+      } else {
+        alert("Código no válido. Intenta de nuevo.");
+      }
+    }
+  </script>
+</body>
+</html>
